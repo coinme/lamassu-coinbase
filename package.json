@@ -21,7 +21,8 @@
     "url": "https://github.com/lamassu/lamassu-coinbase/issues"
   },
   "devDependencies": {
-    "chai": "^1.10.0"
+    "chai": "^1.10.0",
+    "mocha": "^2.1.0"
   },
   "dependencies": {
     "lodash": "^3.0.0",
