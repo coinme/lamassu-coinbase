@@ -14,4 +14,5 @@ var trader = require('./lib/trader');
 exports.purchase = trader.purchase;
 exports.sell = trader.sell;
 
-exports.balance = require('./lib/common').balance;
+// no-op
+exports.balance = function(cb) { cb(new Error('Not implemented')); };
