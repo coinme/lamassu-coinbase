@@ -1,6 +1,6 @@
 {
   "name": "lamassu-coinbase",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lamassu Coinbase ticker and trader",
   "main": "index.js",
   "scripts": {
