@@ -1,14 +1,14 @@
-lamassu-bitstamp
+lamassu-coinbase
 ================
 
-[![Build Status](https://travis-ci.org/lamassu/lamassu-bitstamp.svg)](https://travis-ci.org/lamassu/lamassu-bitstamp)
+[![Build Status](https://travis-ci.org/lamassu/lamassu-coinbase.svg)](https://travis-ci.org/lamassu/lamassu-coinbase)
 
-Lamassu Bitstamp ticker and trader
+Lamassu Coinbase ticker and trader
 
 
 ### Testing
 
-1. Open [`mockConfig.template.json`](https://github.com/lamassu/lamassu-bitstamp/blob/master/test/mockConfig.template.json) file, and input your Bitstamp [credentials](https://www.bitstamp.net/account/security/api/) there,
+1. Open [`mockConfig.template.json`](https://github.com/lamassu/lamassu-coinbase/blob/master/test/mockConfig.template.json) file, and input your Coinbase [credentials](https://www.coinbase.net/account/security/api/) there,
 2. Make sure to check there:
   - [x] Account balance,
   - [x] Buy limit order,

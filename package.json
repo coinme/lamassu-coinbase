@@ -1,32 +1,30 @@
 {
-  "name": "lamassu-bitstamp",
-  "version": "1.0.1",
-  "description": "Lamassu Bitstamp ticker and trader",
+  "name": "lamassu-coinbase",
+  "version": "1.0.0",
+  "description": "Lamassu Coinbase ticker and trader",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lamassu/lamassu-bitstamp.git"
+    "url": "https://github.com/lamassu/lamassu-coinbase.git"
   },
   "keywords": [
     "Lamassu",
-    "Bitstamp",
+    "Coinbase",
     "Bitcoin"
   ],
   "author": "Lamassu (https://lamassu.is)",
   "license": "unlicense",
   "bugs": {
-    "url": "https://github.com/lamassu/lamassu-bitstamp/issues"
+    "url": "https://github.com/lamassu/lamassu-coinbase/issues"
   },
   "devDependencies": {
-    "chai": "^1.9.1",
-    "mocha": "^1.21.4"
+    "chai": "^1.10.0"
   },
   "dependencies": {
-    "async": "~0.2.10",
-    "lodash": "^2.4.1",
-    "wreck": "^3.0.0"
+    "lodash": "^3.0.0",
+    "wreck": "^5.1.0"
   }
 }

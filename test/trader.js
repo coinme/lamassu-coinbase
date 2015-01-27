@@ -66,7 +66,7 @@ if(pluginConfig.SUPPORTED_MODULES.indexOf('trader') !== -1 && !process.env.TRAVI
       var lastUsdPrice = NaN;
 
 
-      // NOTE: this is Bitstamp-specific
+      // NOTE: this is Coinbase-specific
       before(function(done) {
         traderPlugin.ticker('USD', function(err, results) {
           lastUsdPrice = results.USD.rates.ask;
