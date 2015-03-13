@@ -20,6 +20,9 @@
   "bugs": {
     "url": "https://github.com/lamassu/lamassu-coinbase/issues"
   },
+  "bin": {
+    "setup": "./setup"
+  },
   "devDependencies": {
     "chai": "^1.10.0",
     "mocha": "^2.1.0"
