@@ -21,7 +21,7 @@
     "url": "https://github.com/lamassu/lamassu-coinbase/issues"
   },
   "bin": {
-    "setup": "./setup"
+    "coinbase-setup": "./setup"
   },
   "devDependencies": {
     "chai": "^1.10.0",
