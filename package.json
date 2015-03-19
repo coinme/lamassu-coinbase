@@ -1,6 +1,6 @@
 {
   "name": "lamassu-coinbase",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Lamassu Coinbase ticker and trader",
   "main": "index.js",
   "scripts": {
@@ -20,12 +20,17 @@
   "bugs": {
     "url": "https://github.com/lamassu/lamassu-coinbase/issues"
   },
+  "bin": {
+    "coinbase-setup": "./setup"
+  },
   "devDependencies": {
     "chai": "^1.10.0",
     "mocha": "^2.1.0"
   },
   "dependencies": {
     "lodash": "^3.0.0",
-    "wreck": "^5.1.0"
+    "wreck": "^5.1.0",
+    "promptly": "~0.2.0",
+    "lamassu-config": "~1.0.0"
   }
 }
