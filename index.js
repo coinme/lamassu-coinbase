@@ -14,5 +14,9 @@ var trader = require('./lib/trader');
 exports.purchase = trader.purchase;
 exports.sell = trader.sell;
 
-// no-op
-exports.balance = function(cb) { cb(new Error('Not implemented')); };
+
+var wallet = require('./lib/wallet');
+
+exports.balance = wallet.balance;
+exports.sendBitcoins = wallet.sendBitcoins;
+exports.newAddress = wallet.newAddress;

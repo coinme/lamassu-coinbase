@@ -28,9 +28,10 @@
     "mocha": "^2.1.0"
   },
   "dependencies": {
+    "coinbase": "^2.0.3",
+    "lamassu-config": "~1.0.0",
     "lodash": "^3.0.0",
-    "wreck": "^5.1.0",
     "promptly": "~0.2.0",
-    "lamassu-config": "~1.0.0"
+    "wreck": "^5.1.0"
   }
 }

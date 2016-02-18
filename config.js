@@ -3,7 +3,7 @@
 var _ = require('lodash');
 
 exports.NAME = 'Coinbase';
-exports.SUPPORTED_MODULES = ['ticker', 'trader'];
+exports.SUPPORTED_MODULES = ['ticker', 'trader', 'wallet'];
 exports.API_ENDPOINT = 'https://api.exchange.coinbase.com';
 
 exports.SATOSHI_FACTOR = 1e8;

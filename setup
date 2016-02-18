@@ -5,21 +5,39 @@ var LamassuConfig = require('lamassu-config');
 var promptly = require('promptly');
 
 var config = new LamassuConfig();
+var Client = require('coinbase').Client;
 
 console.log('\nSetting up the Coinbase Exchange plugin.\n');
 console.log('Please enter your API credentials.\n');
+
 promptly.prompt('Key: ', function(keyErr, key) {
   promptly.prompt('Secret: ', function(secretErr, secret) {
-    promptly.password('Password: ', function(passwordErr, password) {
-      updateDb(key, secret, password, function(err) {
-        if (err) throw err;
-        console.log('\nSuccess.');
+    promptly.prompt('AccountId: ', function(accountErr, accountId) {
+
+      var client = new Client({'apiKey': key, 'apiSecret': secret});
+      client.getAccount(accountId, function(accountErr, account) {
+        if(accountErr) {
+          console.error("Account not found. Valid accounts are:");
+          client.getAccounts({}, function(err, accounts) {
+            accounts.forEach(function(acct) {
+              console.log(acct.name + ': ' + acct.id);
+            });
+            throw Error(accountErr.message);
+          });
+        } else {
+          updateDb(key, secret, accountId, function(err) {
+            if (err) throw err;
+            console.log('\nSuccess.');
+          });
+        }
       });
+
+
     });
   });
 });
 
-function updateDb(key, secret, password, callback) {
+function updateDb(key, secret, accountId, callback) {
   var newConfig = {
     exchanges: {
       plugins: {
@@ -27,12 +45,14 @@ function updateDb(key, secret, password, callback) {
           coinbase: {
             key: key,
             secret: secret,
-            password: password
+            accountId: accountId
           }
         },
         current: {
           ticker: 'coinbase',
-          trade: 'coinbase'
+          trade: 'coinbase',
+          transfer: 'coinbase',
+          wallet: 'coinbase'
         }
       }
     }
