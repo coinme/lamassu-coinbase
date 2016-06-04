@@ -10,5 +10,7 @@ exports.SATOSHI_FACTOR = 1e8;
 exports.FUDGE_FACTOR = 1.05;
 
 exports.config = function config(localConfig) {
-  if (localConfig) _.merge(exports, localConfig);
+  if (localConfig) {
+      _.merge(exports, localConfig);
+  }
 };
